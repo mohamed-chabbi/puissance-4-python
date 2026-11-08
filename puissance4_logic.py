@@ -31,12 +31,12 @@ def get_next_row(board, col):
     return None
 
 
-# Placer un pion dans une colonne
+# make a move
 def drop_piece(board, row, col, player):
     board[row][col] = player
 
 
-# Verifier si un joueur a gagne
+# checking the winner
 def check_winner(board, player):
 
     # Verification horizontale
@@ -78,7 +78,7 @@ def check_winner(board, player):
     return False
 
 
-# Verifier si le damier est plein
+# check if its full
 def is_draw(board):
     for c in range(COLS):
         if board[0][c] == EMPTY:
